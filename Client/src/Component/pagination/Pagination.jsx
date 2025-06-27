@@ -4,14 +4,13 @@ import style from './pagin.module.css'
 const Pagination = ({ totalPosts, postPerPage, setCurrentPage }) => {
   const pages = [];
 
-  console.log("Total posts:", totalPosts);
-  console.log("Post per page:", postPerPage);
+ 
 
   for (let i = 1; i <= Math.ceil(totalPosts / postPerPage); i++) {
     pages.push(i);
   }
 
-  console.log("Pages:", pages);
+
 
   return (
     <div className={style.container} >

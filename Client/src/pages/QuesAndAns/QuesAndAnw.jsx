@@ -17,7 +17,7 @@ function QuesAndAnw() {
           .get(`/question/${question_id}`)
           .then((res) => {
             setQuestion(res.data);
-            console.log(res);
+           
           })
           .catch((error) => console.log(error));
       } catch (error) {

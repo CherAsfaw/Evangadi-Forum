@@ -18,13 +18,13 @@ function AnswerCard({ data }) {
   const [showComments, setShowComments] = useState(false);
   const [newComment, setNewComment] = useState("");
 
-console.log(user);
+
 
   useEffect(() => {
     const fetchReactions = async () => {
       try {
         const res = await axios.get(`/answer/${data.answer_id}/react`);
-        console.log(res);
+       
         setLikeCount(res.data.likeCount);
         setDislikeCount(res.data.dislikeCount);
         setActiveBtn(res.data.userReaction); 

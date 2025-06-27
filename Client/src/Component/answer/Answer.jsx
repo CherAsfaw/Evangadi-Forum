@@ -14,7 +14,7 @@ function Answer() {
           .get(`/question/${question_id}/answer`)
           .then((res) => {
             setAnswers(res.data);
-            console.log(res);
+            
           })
           .catch((error) => console.log(error));
       } catch (error) {
